@@ -6,21 +6,22 @@ import {
   Drawer,
   Hidden,
   List,
-  Typography
+  Typography,
 } from '@mui/material';
 import {
   BarChart as BarChartIcon,
   Settings as SettingsIcon,
   ShoppingBag as ShoppingBagIcon,
   User as UserIcon,
-  Users as UsersIcon
+  Users as UsersIcon,
+  Camera as CameraIcon
 } from 'react-feather';
 import NavItem from 'components/atoms/NavItem';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
+  avatar: 'https://ca.slack-edge.com/T02FEPBTM-U02GG75D2AH-54404fbd0ad0-512',
   jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
+  name: 'Walter Chacon'
 };
 
 const items = [
@@ -40,6 +41,11 @@ const items = [
     title: 'Posts'
   },
   {
+    href: '/admin/videos',
+    icon: CameraIcon,
+    title: 'Videos'
+  },
+  {
     href: '/admin/account',
     icon: UserIcon,
     title: 'Account'
@@ -53,7 +59,7 @@ const items = [
 
 type DashboardSidebarProps = {
   onMobileClose: () => void
-  openMobile: boolean 
+  openMobile: boolean
 }
 
 const DashboardSidebar = ({ onMobileClose, openMobile = false }: DashboardSidebarProps) => {
@@ -110,7 +116,6 @@ const DashboardSidebar = ({ onMobileClose, openMobile = false }: DashboardSideba
           ))}
         </List>
       </Box>
-      <Box sx={{ flexGrow: 1 }} />
     </Box>
   );
 

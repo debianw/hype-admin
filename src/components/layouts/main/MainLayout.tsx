@@ -1,16 +1,47 @@
-import { Box } from "@mui/system"
-import { Outlet } from "react-router"
+import { Outlet } from 'react-router-dom';
+import { styled } from '@mui/system';
+import MainNavbar from 'components/layouts/main/MainNavbar';
 
-const MainLayout = () => {
-  return (
-    <Box sx={{
-      backgroundColor: 'grey',
-      padding: '16px',
-      border: '2px solid orange',
-    }}>
-      <Outlet />
-    </Box>
-  )
-}
+const MainLayoutRoot = styled('div')(
+  ({ theme }) => ({
+    backgroundColor: theme.palette.background.paper,
+    display: 'flex',
+    height: '100%',
+    overflow: 'hidden',
+    width: '100%'
+  })
+);
 
-export default MainLayout
+const MainLayoutWrapper = styled('div')({
+  display: 'flex',
+  flex: '1 1 auto',
+  overflow: 'hidden',
+  paddingTop: 64
+});
+
+const MainLayoutContainer = styled('div')({
+  display: 'flex',
+  flex: '1 1 auto',
+  overflow: 'hidden'
+});
+
+const MainLayoutContent = styled('div')({
+  flex: '1 1 auto',
+  height: '100%',
+  overflow: 'auto'
+});
+
+const MainLayout = () => (
+  <MainLayoutRoot>
+    <MainNavbar />
+    <MainLayoutWrapper>
+      <MainLayoutContainer>
+        <MainLayoutContent>
+          <Outlet />
+        </MainLayoutContent>
+      </MainLayoutContainer>
+    </MainLayoutWrapper>
+  </MainLayoutRoot>
+);
+
+export default MainLayout;

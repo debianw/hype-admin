@@ -1,5 +1,5 @@
 import { useState, MouseEventHandler } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   AppBar,
@@ -20,7 +20,12 @@ interface IDashboardNavbar extends AppBarProps {
 }
 
 const DashboardNavbar = ({ onMobileNavOpen, ...rest }: IDashboardNavbar) => {
+  const navigate = useNavigate();
   const [notifications] = useState([]);
+
+  const onLogout = () => {
+    navigate('/')
+  }
 
   return (
     <AppBar
@@ -42,7 +47,7 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }: IDashboardNavbar) => {
               <NotificationsIcon />
             </Badge>
           </IconButton>
-          <IconButton color="inherit" size="large">
+          <IconButton onClick={onLogout} color="inherit" size="large">
             <InputIcon />
           </IconButton>
         </Hidden>
