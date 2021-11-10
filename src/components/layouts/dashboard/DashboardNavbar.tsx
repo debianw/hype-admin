@@ -14,16 +14,19 @@ import MenuIcon from '@mui/icons-material/Menu'
 import NotificationsIcon from '@mui/icons-material/NotificationsOutlined'
 import InputIcon from '@mui/icons-material/Input'
 import Logo from 'components/atoms/Logo';
+import useAuth from 'hooks/useAuth'
 
 interface IDashboardNavbar extends AppBarProps {
   onMobileNavOpen: MouseEventHandler<HTMLButtonElement> 
 }
 
 const DashboardNavbar = ({ onMobileNavOpen, ...rest }: IDashboardNavbar) => {
+  const { signOut } = useAuth()
   const navigate = useNavigate();
   const [notifications] = useState([]);
 
   const onLogout = () => {
+    signOut!()
     navigate('/')
   }
 

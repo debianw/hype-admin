@@ -1,4 +1,5 @@
 import { Navigate } from "react-router";
+import RequireAuth from "components/atoms/RequireAuth";
 import DashboardLayout from "components/layouts/dashboard/DashboardLayout";
 import MainLayout from "components/layouts/main/MainLayout";
 import DashboardScreen from "screens/dashboard/DashboardScreen";
@@ -15,22 +16,22 @@ const routes = [
     path: 'admin',
     element: <DashboardLayout />,
     children: [
-      { path: '', element: <DashboardScreen /> },
-      { path: 'users', element: <UsersScreen /> },
-      { path: 'posts', element: <PostsScreen /> },
-      { path: 'videos', element: <VideosScreen /> },
-      { path: 'account', element: <AccountScreen /> },
-      { path: 'settings', element: <SettingsScreen /> },
-      { path: '*', element: <Navigate to="/404" />}
+      { path: '', element: <RequireAuth><DashboardScreen /></RequireAuth> },
+      { path: 'users', element: <RequireAuth><UsersScreen /></RequireAuth> },
+      { path: 'posts', element: <RequireAuth><PostsScreen /></RequireAuth> },
+      { path: 'videos', element: <RequireAuth><VideosScreen /></RequireAuth> },
+      { path: 'account', element: <RequireAuth><AccountScreen /></RequireAuth> },
+      { path: 'settings', element: <RequireAuth><SettingsScreen /></RequireAuth> },
+      { path: '*', element: <Navigate to="/404" /> }
     ]
   },
   {
     path: '/',
-    element: <MainLayout />, 
+    element: <MainLayout />,
     children: [
       { path: '', element: <SignInScreen /> },
       { path: '404', element: <NotFound /> },
-      { path: '*', element: <Navigate to="/404" />}
+      { path: '*', element: <Navigate to="/404" /> }
     ]
   }
 ]

@@ -1,20 +1,51 @@
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import {
+  Alert,
   Box,
   Button,
   Container,
-  Grid,
   TextField,
   Typography
 } from '@mui/material';
-import FacebookIcon from 'components/atoms/icons/Facebook';
-import GoogleIcon from 'components/atoms/icons/Google';
+import useAuth from 'hooks/useAuth'
+
+type FormValues = {
+  email: string,
+  password: string
+}
 
 const Login = () => {
+  const [formValues, setFormValues] = useState<FormValues>({
+    email: '',
+    password: '',
+  })
+  const [error, setError] = useState<string | null>(null)
+  const [isSigninIn, setIsSigningIn] = useState<boolean>(false)
+  const { signIn } = useAuth()
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
-    navigate('/admin')
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    try {
+      setError(null)
+      setIsSigningIn(true)
+      await signIn!(formValues.email, formValues.password)
+
+      setIsSigningIn(false)
+      navigate('/admin')
+    } catch(error: any) {
+      setError(error.message)
+      setIsSigningIn(false)
+    }
+  }
+
+  const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormValues(state => ({
+      ...state,
+      [e.target.name]: e.target.value
+    }))
   }
 
   return (
@@ -29,58 +60,10 @@ const Login = () => {
         }}
       >
         <Container maxWidth="sm">
-          <form onSubmit={handleSubmit}>
-            <Box sx={{ mb: 3 }}>
-              <Typography
-                color="textPrimary"
-                variant="h2"
-              >
-                Sign in
-              </Typography>
-              <Typography
-                color="textSecondary"
-                gutterBottom
-                variant="body2"
-              >
-                Sign in on the internal platform
-              </Typography>
-            </Box>
-            <Grid
-              container
-              spacing={3}
-            >
-              <Grid
-                item
-                xs={12}
-                md={6}
-              >
-                <Button
-                  color="primary"
-                  fullWidth
-                  startIcon={<FacebookIcon />}
-                  onClick={handleSubmit}
-                  size="large"
-                  variant="contained"
-                >
-                  Login with Facebook
-                </Button>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-              >
-                <Button
-                  fullWidth
-                  startIcon={<GoogleIcon />}
-                  onClick={handleSubmit}
-                  size="large"
-                  variant="contained"
-                >
-                  Login with Google
-                </Button>
-              </Grid>
-            </Grid>
+          {error && (
+            <Alert severity="error">{error}</Alert>
+          )}
+          <form onSubmit={onSubmit}>
             <Box
               sx={{
                 pb: 1,
@@ -88,11 +71,10 @@ const Login = () => {
               }}
             >
               <Typography
-                align="center"
-                color="textSecondary"
-                variant="body1"
+                color="textPrimary"
+                variant="h2"
               >
-                or login with email address
+                Sign in
               </Typography>
             </Box>
             <TextField
@@ -102,6 +84,8 @@ const Login = () => {
               name="email"
               type="email"
               variant="outlined"
+              value={formValues.email}
+              onChange={onValueChange}
             />
             <TextField
               fullWidth
@@ -110,16 +94,19 @@ const Login = () => {
               name="password"
               type="password"
               variant="outlined"
+              value={formValues.password}
+              onChange={onValueChange}
             />
             <Box sx={{ py: 2 }}>
               <Button
+                disabled={isSigninIn}
                 color="primary"
                 fullWidth
                 size="large"
                 type="submit"
                 variant="contained"
               >
-                Sign in now
+                {isSigninIn ? 'SignIn in, please wait ...' : 'Sign in now'}
               </Button>
             </Box>
           </form>

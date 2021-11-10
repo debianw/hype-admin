@@ -1,0 +1,263 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hype-prod-215542-authRole",
+      "UnauthRoleArn": "arn:aws:iam::346416493606:role/amplify-hype-prod-215542-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::346416493606:role/amplify-hype-prod-215542-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hype-prod-215542-deployment",
+      "UnauthRoleName": "amplify-hype-prod-215542-unauthRole",
+      "StackName": "amplify-hype-prod-215542",
+      "StackId": "arn:aws:cloudformation:us-east-1:346416493606:stack/amplify-hype-prod-215542/a725de30-051d-11ec-8716-0a9eb36083cf",
+      "AmplifyAppId": "dtldt4ehkgshw"
+    },
+    "categories": {
+      "auth": {
+        "hypede0d79c7": {
+          "googleClientId": "1078855301670-s42o0r5mirsg94ve87p7cpfkk9k0nf9m.apps.googleusercontent.com"
+        },
+        "userPoolGroups": {}
+      },
+      "function": {
+        "postsync": {
+          "deploymentBucketName": "amplify-hype-prod-215542-deployment",
+          "s3Key": "amplify-builds/postsync-6c64427a397a73754649-build.zip",
+          "secretsPathAmplifyAppId": "dtldt4ehkgshw"
+        },
+        "S3Trigger53e0b16c": {
+          "deploymentBucketName": "amplify-hype-prod-215542-deployment",
+          "s3Key": "amplify-builds/S3Trigger53e0b16c-4d527756306530425861-build.zip"
+        },
+        "hypede0d79c7PostConfirmation": {
+          "deploymentBucketName": "amplify-hype-prod-215542-deployment",
+          "s3Key": "amplify-builds/hypede0d79c7PostConfirmation-3474457a4878724f3571-build.zip"
+        },
+        "searchKeyResolver": {
+          "deploymentBucketName": "amplify-hype-prod-215542-deployment",
+          "s3Key": "amplify-builds/searchKeyResolver-64756143315668707331-build.zip",
+          "secretsPathAmplifyAppId": "dtldt4ehkgshw"
+        },
+        "videostatuschange": {
+          "deploymentBucketName": "amplify-hype-prod-215542-deployment",
+          "s3Key": "amplify-builds/videostatuschange-546156304b506a6d7851-build.zip"
+        },
+        "actiontrigger": {
+          "deploymentBucketName": "amplify-hype-prod-215542-deployment",
+          "s3Key": "amplify-builds/actiontrigger-587257506f4554666d54-build.zip"
+        },
+        "hypesharedlayer": {
+          "deploymentBucketName": "amplify-hype-prod-215542-deployment",
+          "s3Key": "amplify-builds/hypesharedlayer-LambdaLayerVersion0506d20e-build.zip"
+        },
+        "placesync": {
+          "secretsPathAmplifyAppId": "dtldt4ehkgshw"
+        }
+      },
+      "video": {
+        "hypevideoservice": {
+          "s3UUID": "zcs0w2u0i40q"
+        }
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hype-dev-225356-authRole",
+      "UnauthRoleArn": "arn:aws:iam::346385834224:role/amplify-hype-dev-225356-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::346385834224:role/amplify-hype-dev-225356-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hype-dev-225356-deployment",
+      "UnauthRoleName": "amplify-hype-dev-225356-unauthRole",
+      "StackName": "amplify-hype-dev-225356",
+      "StackId": "arn:aws:cloudformation:us-east-1:346385834224:stack/amplify-hype-dev-225356/cbba8450-0525-11ec-8154-0a375680939f",
+      "AmplifyAppId": "dai69rhwkifzb",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-hype-dev-225356-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    }
+  },
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hype-staging-131256-authRole",
+      "UnauthRoleArn": "arn:aws:iam::658914946274:role/amplify-hype-staging-131256-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::658914946274:role/amplify-hype-staging-131256-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hype-staging-131256-deployment",
+      "UnauthRoleName": "amplify-hype-staging-131256-unauthRole",
+      "StackName": "amplify-hype-staging-131256",
+      "StackId": "arn:aws:cloudformation:us-east-1:658914946274:stack/amplify-hype-staging-131256/ca9d6600-059d-11ec-8a2d-0e30af5d4b9f",
+      "AmplifyAppId": "d2vyap3penaaq0"
+    },
+    "categories": {
+      "auth": {
+        "hypede0d79c7": {
+          "googleClientId": "320693031122-q891kh2g1bkvcjucaes7hsep1k6vn064.apps.googleusercontent.com"
+        },
+        "userPoolGroups": {}
+      },
+      "function": {
+        "postsync": {
+          "deploymentBucketName": "amplify-hype-staging-131256-deployment",
+          "s3Key": "amplify-builds/postsync-72454f77574346303658-build.zip",
+          "secretsPathAmplifyAppId": "d2vyap3penaaq0"
+        },
+        "S3Trigger53e0b16c": {
+          "deploymentBucketName": "amplify-hype-staging-131256-deployment",
+          "s3Key": "amplify-builds/S3Trigger53e0b16c-4d527756306530425861-build.zip"
+        },
+        "hypede0d79c7PostConfirmation": {
+          "deploymentBucketName": "amplify-hype-staging-131256-deployment",
+          "s3Key": "amplify-builds/hypede0d79c7PostConfirmation-6c363232444e4b324d45-build.zip"
+        },
+        "searchKeyResolver": {
+          "deploymentBucketName": "amplify-hype-staging-131256-deployment",
+          "s3Key": "amplify-builds/searchKeyResolver-64756143315668707331-build.zip",
+          "secretsPathAmplifyAppId": "d2vyap3penaaq0"
+        },
+        "videostatuschange": {
+          "deploymentBucketName": "amplify-hype-staging-131256-deployment",
+          "s3Key": "amplify-builds/videostatuschange-546156304b506a6d7851-build.zip"
+        },
+        "actiontrigger": {
+          "deploymentBucketName": "amplify-hype-staging-131256-deployment",
+          "s3Key": "amplify-builds/actiontrigger-587257506f4554666d54-build.zip"
+        },
+        "hypesharedlayer": {
+          "deploymentBucketName": "amplify-hype-staging-131256-deployment",
+          "s3Key": "amplify-builds/hypesharedlayer-LambdaLayerVersion62e45cdd-build.zip"
+        },
+        "placesync": {
+          "deploymentBucketName": "amplify-hype-staging-131256-deployment",
+          "s3Key": "amplify-builds/placesync-674d312b36654d63366f-build.zip",
+          "secretsPathAmplifyAppId": "d2vyap3penaaq0"
+        }
+      },
+      "video": {
+        "hypevideoservice": {
+          "s3UUID": "s97xbgg00wxw"
+        }
+      }
+    }
+  },
+  "personalcw": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hype-personalcw-200905-authRole",
+      "UnauthRoleArn": "arn:aws:iam::737590263256:role/amplify-hype-personalcw-200905-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::737590263256:role/amplify-hype-personalcw-200905-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+      "UnauthRoleName": "amplify-hype-personalcw-200905-unauthRole",
+      "StackName": "amplify-hype-personalcw-200905",
+      "StackId": "arn:aws:cloudformation:us-east-1:737590263256:stack/amplify-hype-personalcw-200905/edf64510-05d7-11ec-9c8a-0a359cb32bb1",
+      "AmplifyAppId": "d1da2s8lhj6amg"
+    },
+    "categories": {
+      "auth": {
+        "hypede0d79c7": {
+          "googleClientId": "354829346241-recfrhu111rbje8gnabadtqh1fa5kpgc.apps.googleusercontent.com"
+        },
+        "userPoolGroups": {}
+      },
+      "function": {
+        "postsync": {
+          "deploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+          "s3Key": "amplify-builds/postsync-76386e36567a66676f6e-build.zip"
+        },
+        "S3Trigger53e0b16c": {
+          "deploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+          "s3Key": "amplify-builds/S3Trigger53e0b16c-4d527756306530425861-build.zip"
+        },
+        "hypede0d79c7PostConfirmation": {
+          "deploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+          "s3Key": "amplify-builds/hypede0d79c7PostConfirmation-3474457a4878724f3571-build.zip"
+        },
+        "searchKeyResolver": {
+          "deploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+          "s3Key": "amplify-builds/searchKeyResolver-64756143315668707331-build.zip"
+        },
+        "videostatuschange": {
+          "deploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+          "s3Key": "amplify-builds/videostatuschange-546156304b506a6d7851-build.zip"
+        },
+        "actiontrigger": {
+          "deploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+          "s3Key": "amplify-builds/actiontrigger-587257506f4554666d54-build.zip"
+        },
+        "placesync": {
+          "deploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+          "s3Key": "amplify-builds/placesync-7248356756365a4e5931-build.zip"
+        },
+        "hypesharedlayer": {
+          "deploymentBucketName": "amplify-hype-personalcw-200905-deployment",
+          "s3Key": "amplify-builds/hypesharedlayer-LambdaLayerVersiond02fd262-build.zip"
+        }
+      },
+      "video": {
+        "hypevideoservice": {
+          "s3UUID": "ch5qj8uaqcsk"
+        }
+      }
+    }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hype-test-111904-authRole",
+      "UnauthRoleArn": "arn:aws:iam::312754708935:role/amplify-hype-test-111904-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::312754708935:role/amplify-hype-test-111904-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hype-test-111904-deployment",
+      "UnauthRoleName": "amplify-hype-test-111904-unauthRole",
+      "StackName": "amplify-hype-test-111904",
+      "StackId": "arn:aws:cloudformation:us-east-1:312754708935:stack/amplify-hype-test-111904/0b0cf910-0b0e-11ec-bf54-12662ce8636d",
+      "AmplifyAppId": "d1w3m7mei798ou"
+    },
+    "categories": {
+      "auth": {
+        "hypede0d79c7": {
+          "googleClientId": "124693269482-1lj1j5mc08f1n8hb1a5npn9h4u7jmdd7.apps.googleusercontent.com"
+        },
+        "userPoolGroups": {}
+      },
+      "function": {
+        "postsync": {
+          "deploymentBucketName": "amplify-hype-test-111904-deployment",
+          "s3Key": "amplify-builds/postsync-72454f77574346303658-build.zip",
+          "secretsPathAmplifyAppId": "d1w3m7mei798ou"
+        },
+        "S3Trigger53e0b16c": {
+          "deploymentBucketName": "amplify-hype-test-111904-deployment",
+          "s3Key": "amplify-builds/S3Trigger53e0b16c-4d527756306530425861-build.zip"
+        },
+        "hypede0d79c7PostConfirmation": {
+          "deploymentBucketName": "amplify-hype-test-111904-deployment",
+          "s3Key": "amplify-builds/hypede0d79c7PostConfirmation-6c363232444e4b324d45-build.zip"
+        },
+        "searchKeyResolver": {
+          "deploymentBucketName": "amplify-hype-test-111904-deployment",
+          "s3Key": "amplify-builds/searchKeyResolver-64756143315668707331-build.zip",
+          "secretsPathAmplifyAppId": "d1w3m7mei798ou"
+        },
+        "videostatuschange": {
+          "deploymentBucketName": "amplify-hype-test-111904-deployment",
+          "s3Key": "amplify-builds/videostatuschange-546156304b506a6d7851-build.zip"
+        },
+        "actiontrigger": {
+          "deploymentBucketName": "amplify-hype-test-111904-deployment",
+          "s3Key": "amplify-builds/actiontrigger-587257506f4554666d54-build.zip"
+        },
+        "placesync": {
+          "deploymentBucketName": "amplify-hype-test-111904-deployment",
+          "s3Key": "amplify-builds/placesync-69514b5541486a4e7173-build.zip",
+          "secretsPathAmplifyAppId": "d1w3m7mei798ou"
+        },
+        "hypesharedlayer": {
+          "deploymentBucketName": "amplify-hype-test-111904-deployment",
+          "s3Key": "amplify-builds/hypesharedlayer-LambdaLayerVersionb32ccaf4-build.zip"
+        }
+      },
+      "video": {
+        "hypevideoservice": {
+          "s3UUID": "l8zzacqcjz6y"
+        }
+      }
+    }
+  }
+}
