@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 
-const VideosScreen = () => {
+const PlaceDetailsScreen = () => {
   return (
     <>
       <Box
@@ -11,11 +11,11 @@ const VideosScreen = () => {
         }}
       >
         <Container maxWidth={false}>
-          <Typography variant="h4">Videos screen ...</Typography>
+          <Typography variant="h4">Place details screen ...</Typography>
         </Container>
       </Box>
     </>
   )
 }
 
-export default VideosScreen
+export default PlaceDetailsScreen 

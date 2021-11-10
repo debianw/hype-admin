@@ -9,26 +9,26 @@ import {
   Typography,
 } from '@mui/material';
 import {
-  BarChart as BarChartIcon,
-  Settings as SettingsIcon,
-  ShoppingBag as ShoppingBagIcon,
-  User as UserIcon,
+  // BarChart as BarChartIcon,
+  // Settings as SettingsIcon,
+  // User as UserIcon,
   Users as UsersIcon,
-  Camera as CameraIcon
+  AlertTriangle as AlertIcon, 
+  MapPin as PlaceIcon,
 } from 'react-feather';
 import NavItem from 'components/atoms/NavItem';
-
-const user = {
-  avatar: 'https://ca.slack-edge.com/T02FEPBTM-U02GG75D2AH-54404fbd0ad0-512',
-  jobTitle: 'Senior Developer',
-  name: 'Walter Chacon'
-};
+import useAuth from 'hooks/useAuth';
 
 const items = [
+  // {
+  //   href: '/admin/dashboard',
+  //   icon: BarChartIcon,
+  //   title: 'Dashboard'
+  // },
   {
-    href: '/admin',
-    icon: BarChartIcon,
-    title: 'Dashboard'
+    href: '/admin/places',
+    icon: PlaceIcon,
+    title: 'Places'
   },
   {
     href: '/admin/users',
@@ -36,25 +36,20 @@ const items = [
     title: 'Users'
   },
   {
-    href: '/admin/posts',
-    icon: ShoppingBagIcon,
-    title: 'Posts'
+    href: '/admin/posts/flagged',
+    icon: AlertIcon,
+    title: 'Reports'
   },
-  {
-    href: '/admin/videos',
-    icon: CameraIcon,
-    title: 'Videos'
-  },
-  {
-    href: '/admin/account',
-    icon: UserIcon,
-    title: 'Account'
-  },
-  {
-    href: '/admin/settings',
-    icon: SettingsIcon,
-    title: 'Settings'
-  }
+  // {
+  //   href: '/admin/account',
+  //   icon: UserIcon,
+  //   title: 'Account'
+  // },
+  // {
+  //   href: '/admin/settings',
+  //   icon: SettingsIcon,
+  //   title: 'Settings'
+  // }
 ];
 
 type DashboardSidebarProps = {
@@ -63,6 +58,7 @@ type DashboardSidebarProps = {
 }
 
 const DashboardSidebar = ({ onMobileClose, openMobile = false }: DashboardSidebarProps) => {
+  const { cognitoUser: user } = useAuth()
 
   const content = (
     <Box
@@ -82,7 +78,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile = false }: DashboardSideba
       >
         <Avatar
           component={RouterLink}
-          src={user.avatar}
+          src="/static/images/logo.png"
           sx={{
             cursor: 'pointer',
             width: 64,
@@ -94,13 +90,13 @@ const DashboardSidebar = ({ onMobileClose, openMobile = false }: DashboardSideba
           color="textPrimary"
           variant="h5"
         >
-          {user.name}
+          {user?.name}
         </Typography>
         <Typography
           color="textSecondary"
           variant="body2"
         >
-          {user.jobTitle}
+          HypeNight Administrator
         </Typography>
       </Box>
       <Divider />

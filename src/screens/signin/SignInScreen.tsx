@@ -34,7 +34,7 @@ const Login = () => {
       await signIn!(formValues.email, formValues.password)
 
       setIsSigningIn(false)
-      navigate('/admin')
+      navigate('/admin/places')
     } catch(error: any) {
       setError(error.message)
       setIsSigningIn(false)

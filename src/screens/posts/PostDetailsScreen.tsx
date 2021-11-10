@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 
-const UsersScreen = () => {
+const PostDetailsScreen = () => {
   return (
     <>
       <Box
@@ -11,11 +11,11 @@ const UsersScreen = () => {
         }}
       >
         <Container maxWidth={false}>
-          <Typography variant="h4">Posts screen ...</Typography>
+          <Typography variant="h4">Post details screen ...</Typography>
         </Container>
       </Box>
     </>
   )
 }
 
-export default UsersScreen
+export default PostDetailsScreen 
